@@ -29,29 +29,7 @@
                             <th scope="col">Minutes Away</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Oriental Express</th>
-                            <td>Clarksville</td>
-                            <td>30</td>
-                            <td>10:00 PM</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td>London</td>
-                            <td>30</td>
-                            <td>10:00 PM</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Nuremberg</td>
-                            <td>30</td>
-                            <td>10:00 PM</td>
-                            <td>10</td>
-                        </tr>
-                    </tbody>
+                    <tbody id=table></tbody>
                 </table>
 
         </div>
@@ -72,15 +50,20 @@
                     <label for='time'>Departure Time</label>
                     <input placeholder="4:30" class="form-control bg-dark text-white" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" id="form-time">
                 </div>
-                <button type="submit" class="btn btn-info">Submit</button>
+                <div class='form-group'>
+                    <label for='time'>Frequency (min)</label>
+                    <input placeholder="30" class="form-control bg-dark text-white" type="number" id="form-freq">
+                </div>
+                <button id=add-train type="submit" class="btn btn-info">Submit</button>
             </form>
 
         </div>
 
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src='assets/script.js'></script>
+    <script src='script.js'></script>
     
 </body>
 </html>
